@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  /* config options here */
+  output: 'export', // enables static HTML export for Netlify
 };
 
 export default nextConfig;
