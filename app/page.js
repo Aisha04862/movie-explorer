@@ -25,7 +25,6 @@ export default function HomePage() {
     let results = data.results || [];
     setTotalResults(data.total_results || 0);
 
-    // Sorting
     if (sort === 'releaseAsc') results.sort((a, b) => new Date(a.release_date) - new Date(b.release_date));
     if (sort === 'releaseDesc') results.sort((a, b) => new Date(b.release_date) - new Date(a.release_date));
     if (sort === 'ratingAsc') results.sort((a, b) => a.vote_average - b.vote_average);
@@ -42,12 +41,11 @@ export default function HomePage() {
 
   return (
     <div className="page-container">
-      {/* Main header with blue background */}
+      {}
       <header className="main-header">
         <h1>Movie Explorer</h1>
       </header>
 
-      {/* Controls bar with slightly different blue */}
       <div className="controls-bar">
         <div className="controls">
           <input
@@ -66,7 +64,7 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* Movie Grid */}
+      {}
       <div className="movies-grid">
         {movies.map((movie) => (
           <MovieCard
@@ -79,7 +77,7 @@ export default function HomePage() {
         ))}
       </div>
 
-      {/* Pagination */}
+      {}
       <div className="pagination">
         <button 
           disabled={page === 1} 

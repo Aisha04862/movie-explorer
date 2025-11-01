@@ -1,4 +1,3 @@
-/* Page container */
 .page-container {
   max-width: 1400px;
   margin: 0 auto;
@@ -6,9 +5,8 @@
   font-family: Arial, sans-serif;
 }
 
-/* Main header with your top blue */
 .main-header {
-  background-color: #263544; /* top header color */
+  background-color: #263544; 
   color: white;
   text-align: center;
   padding: 20px 0;
@@ -16,14 +14,13 @@
   font-weight: bold;
   width: 100vw;
   box-sizing: border-box;
-  border-bottom: 6px solid #1f2a36; /* thicker bottom border */
+  border-bottom: 6px solid #1f2a36; 
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
 }
 
-/* Controls bar with your bottom blue */
 .controls-bar {
-  background-color: #2c3f54; /* bottom controls bar color */
+  background-color: #2c3f54; 
   padding: 15px 0;
   width: 100vw;
   margin-left: calc(50% - 50vw);
@@ -43,36 +40,42 @@
   border: none;
   border-radius: 4px;
   outline: none;
-  background-color: white; /* makes inputs visible on dark blue */
+  background-color: white; 
 }
 
-/* Movies grid: 5 columns x 4 rows per page */
 .movies-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 24px 20px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
   padding: 20px;
+  justify-items: center;
 }
 
-/* Movie Card */
 .movie-card {
   background-color: #fff;
-  border-radius: 8px;
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  transition: transform 0.2s, box-shadow 0.2s;
-  border: 1px solid #ddd;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  padding: 16px;
-  margin: 0;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 100%;
+  max-width: 240px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.movie-card img {
+  width: 100%;
+  aspect-ratio: 2 / 3; 
+  object-fit: cover;
+  border: 10px solid white;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
 .movie-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 .movie-card img {
@@ -105,7 +108,6 @@
   color: #777;
 }
 
-/* Pagination */
 .pagination {
   display: flex;
   justify-content: center;
@@ -114,12 +116,11 @@
   margin: 20px 0;
 }
 
-/* Buttons with bottom blue */
 .nav-btn {
   padding: 10px 14px;
   border: none;
   border-radius: 6px;
-  background-color: #2c87cb; /* updated background color */
+  background-color: #2c87cb; 
   color: white;
   font-weight: bold;
   cursor: pointer;
@@ -127,7 +128,7 @@
 }
 
 .nav-btn:hover:not(:disabled) {
-  background-color: #3a4f68; /* slightly lighter hover */
+  background-color: #3a4f68; 
 }
 
 .nav-btn:disabled {
